@@ -4,8 +4,26 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
 
+function parseSiteUrl(value: string | undefined) {
+  const candidate = value?.trim();
+  if (!candidate) return undefined;
+
+  try {
+    const url = new URL(candidate.includes('://') ? candidate : `https://${candidate}`);
+    return url.protocol === 'http:' || url.protocol === 'https:' ? url : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+const metadataBase =
+  parseSiteUrl(process.env.SITE_URL) ??
+  parseSiteUrl(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
+  parseSiteUrl(process.env.VERCEL_URL) ??
+  new URL('http://localhost:3000');
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL ?? 'http://localhost:3000'),
+  metadataBase,
   title: 'AeroSpeed Travel & Tours | Explore Batanes & Itbayat',
   description:
     'Discover Batanes with AeroSpeed Travel & Tours. Explore Batan, Sabtang, and Itbayat with curated tours, local expertise, and AeroSpeed air access to Itbayat.',
