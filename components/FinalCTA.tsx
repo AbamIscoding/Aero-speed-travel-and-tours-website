@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, MessageCircle, Plane } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
+import { companySocials } from '@/data/site';
 
 export default function FinalCTA() {
   return (
@@ -14,7 +15,7 @@ export default function FinalCTA() {
         <p>Let AeroSpeed take you beyond the usual. Tell us your travel dates and we’ll help create your Batanes journey by land, sea, and air.</p>
         <div className="cta-actions">
           <Link className="button cta-primary" href="/contact">Customize My Trip <ArrowRight aria-hidden="true" size={16} /></Link>
-          <Link className="button cta-secondary" href="/contact">Message AeroSpeed <MessageCircle aria-hidden="true" size={16} /></Link>
+          <a className="button cta-secondary" href={companySocials.facebook} rel="noreferrer noopener" target="_blank">Message AeroSpeed <MessageCircle aria-hidden="true" size={16} /></a>
         </div>
       </Reveal>
     </section>

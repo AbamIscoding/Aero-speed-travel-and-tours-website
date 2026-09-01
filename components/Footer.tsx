@@ -1,7 +1,15 @@
 import Link from 'next/link';
-import { Camera, Mail, MapPin, MessageCircle, Music2, Phone, Plane, Play } from 'lucide-react';
+import { Camera, Mail, MapPin, MessageCircle, Music2, Phone, Plane } from 'lucide-react';
 import { Wordmark } from '@/components/Brand';
-import { COMPANY_EMAIL, COMPANY_LOCATION, COMPANY_PHONE, footerNavigation } from '@/data/site';
+import {
+  COMPANY_EMAIL,
+  COMPANY_EMAIL_HREF,
+  COMPANY_LOCATION,
+  COMPANY_PHONE,
+  COMPANY_PHONE_HREF,
+  companySocials,
+  footerNavigation,
+} from '@/data/site';
 
 export default function Footer() {
   return (
@@ -22,19 +30,18 @@ export default function Footer() {
         </div>
         <div className="footer-column footer-contact">
           <h2>Contact</h2>
-          <span><Phone aria-hidden="true" size={13} />{COMPANY_PHONE}</span>
-          <span><Mail aria-hidden="true" size={13} />{COMPANY_EMAIL}</span>
+          <a href={COMPANY_PHONE_HREF}><Phone aria-hidden="true" size={13} />{COMPANY_PHONE}</a>
+          <a href={COMPANY_EMAIL_HREF}><Mail aria-hidden="true" size={13} />{COMPANY_EMAIL}</a>
           <span><MapPin aria-hidden="true" size={13} />AeroSpeed, {COMPANY_LOCATION}</span>
         </div>
         <div className="footer-column footer-socials">
           <h2>Socials</h2>
-          <div aria-label="Social profiles pending confirmation">
-            <span><MessageCircle aria-hidden="true" size={16} /></span>
-            <span><Camera aria-hidden="true" size={16} /></span>
-            <span><Play aria-hidden="true" size={17} /></span>
-            <span><Music2 aria-hidden="true" size={16} /></span>
+          <div aria-label="AeroSpeed social profiles">
+            <a aria-label="AeroSpeed on Facebook" href={companySocials.facebook} rel="noreferrer noopener" target="_blank"><MessageCircle aria-hidden="true" size={16} /></a>
+            <a aria-label="AeroSpeed on Instagram" href={companySocials.instagram} rel="noreferrer noopener" target="_blank"><Camera aria-hidden="true" size={16} /></a>
+            <a aria-label="AeroSpeed on TikTok" href={companySocials.tiktok} rel="noreferrer noopener" target="_blank"><Music2 aria-hidden="true" size={16} /></a>
           </div>
-          <small>Official profile links to be added.</small>
+          <small>Follow AeroSpeed Travel &amp; Tours.</small>
         </div>
       </div>
       <div className="footer-bottom">

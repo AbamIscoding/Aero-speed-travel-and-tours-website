@@ -28,13 +28,14 @@ export default function PackagesPage() {
             {item.recommended && <span className="recommended-label">Recommended</span>}
             <div className="package-detail-image"><Image alt={item.imageAlt} fill sizes="(max-width: 820px) 100vw, 38vw" src={item.image} /></div>
             <div className="package-detail-copy">
-              <small>{item.duration}</small><h2>{item.name}</h2><p className="package-price"><span>from</span>{item.price}</p>
+              <small>{item.duration}</small><h2>{item.name}</h2><p className="package-price">{item.price}</p>
+              <p className="package-minimum">{item.minimumPax}</p>
               <ul>{item.inclusions.map((inclusion) => <li key={inclusion}><Check aria-hidden="true" size={14} />{inclusion}</li>)}</ul>
               <Link className="button button-primary" href="/contact">Customize this journey <ArrowRight aria-hidden="true" size={16} /></Link>
             </div>
           </article>
         ))}
-        <p className="placeholder-note">All prices are placeholders. Final pricing, availability, inclusions, and flight details must be confirmed by AeroSpeed.</p>
+        <p className="package-note">Rates are per person and apply to the stated minimum group size. Availability and final booking terms are confirmed by AeroSpeed.</p>
       </section>
     </>
   );

@@ -13,4 +13,4 @@ Open `http://localhost:3000`.
 
 ## Content before launch
 
-Confirm AeroSpeed’s official phone number, email address, package prices, flight timing, schedule, aircraft details, social links, verified guest reviews, and legal privacy policy. These values are intentionally marked as placeholders in the site data and interface.
+Confirm AeroSpeed’s flight timing, schedule, aircraft details, contact-form destination, verified guest reviews, and legal privacy policy before public launch. These values remain intentionally marked where they appear in the site.

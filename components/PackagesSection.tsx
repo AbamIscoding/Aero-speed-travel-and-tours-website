@@ -26,7 +26,8 @@ export default function PackagesSection() {
             <div className="package-body">
               <small>{item.duration}</small>
               <h3>{item.name}</h3>
-              <p className="package-price"><span>from</span>{item.price}</p>
+              <p className="package-price">{item.price}</p>
+              <p className="package-minimum">{item.minimumPax}</p>
               <ul>
                 {item.inclusions.map((inclusion) => <li key={inclusion}><Check aria-hidden="true" size={13} />{inclusion}</li>)}
               </ul>
@@ -37,7 +38,7 @@ export default function PackagesSection() {
           </Reveal>
         ))}
       </div>
-      <p className="placeholder-note">Package prices are placeholders and must be confirmed with AeroSpeed before booking.</p>
+      <p className="package-note">Rates are per person and apply to the stated minimum group size. Contact AeroSpeed to confirm availability.</p>
     </section>
   );
 }

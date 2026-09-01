@@ -1,8 +1,15 @@
 import type { Metadata } from 'next';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Camera, Mail, MapPin, MessageCircle, Music2, Phone } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import InnerHero from '@/components/InnerHero';
-import { COMPANY_EMAIL, COMPANY_LOCATION, COMPANY_PHONE } from '@/data/site';
+import {
+  COMPANY_EMAIL,
+  COMPANY_EMAIL_HREF,
+  COMPANY_LOCATION,
+  COMPANY_PHONE,
+  COMPANY_PHONE_HREF,
+  companySocials,
+} from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'Plan Your Batanes Trip | AeroSpeed Travel & Tours',
@@ -24,10 +31,15 @@ export default function ContactPage() {
         <aside className="contact-details">
           <p className="section-kicker">AeroSpeed details</p>
           <h2>Start with a conversation.</h2>
-          <p>Official phone and email details still need to be supplied before launch.</p>
-          <span><Phone aria-hidden="true" /> <small>Phone</small><strong>{COMPANY_PHONE}</strong></span>
-          <span><Mail aria-hidden="true" /> <small>Email</small><strong>{COMPANY_EMAIL}</strong></span>
+          <p>Call, email, or connect with AeroSpeed on social media to start planning your Batanes journey.</p>
+          <a href={COMPANY_PHONE_HREF}><Phone aria-hidden="true" /> <small>Phone</small><strong>{COMPANY_PHONE}</strong></a>
+          <a href={COMPANY_EMAIL_HREF}><Mail aria-hidden="true" /> <small>Email</small><strong>{COMPANY_EMAIL}</strong></a>
           <span><MapPin aria-hidden="true" /> <small>Location</small><strong>{COMPANY_LOCATION}</strong></span>
+          <div className="contact-socials" aria-label="AeroSpeed social profiles">
+            <a href={companySocials.facebook} rel="noreferrer noopener" target="_blank"><MessageCircle aria-hidden="true" />Facebook</a>
+            <a href={companySocials.instagram} rel="noreferrer noopener" target="_blank"><Camera aria-hidden="true" />Instagram</a>
+            <a href={companySocials.tiktok} rel="noreferrer noopener" target="_blank"><Music2 aria-hidden="true" />TikTok</a>
+          </div>
         </aside>
         <ContactForm />
       </section>

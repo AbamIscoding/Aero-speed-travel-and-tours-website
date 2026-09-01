@@ -3,6 +3,7 @@ export type TravelPackage = {
   name: string;
   price: string;
   duration: string;
+  minimumPax: string;
   inclusions: readonly string[];
   image: string;
   imageAlt: string;
@@ -13,18 +14,35 @@ export const packages: readonly TravelPackage[] = [
   {
     slug: 'essential-batanes',
     name: 'Essential Batanes',
-    price: '₱XX,XXX / pax',
+    price: '₱9,450 / pax',
     duration: '3 Days / 2 Nights',
-    inclusions: ['Batan Island Tour', 'Daily Breakfast', 'Transfers', 'Permits'],
+    minimumPax: 'Minimum of 4 pax',
+    inclusions: [
+      'North Batan Tour',
+      'South Batan Tour',
+      'Sabtang Island Tour',
+      'Hotel accommodation',
+      'Lunch during tours',
+      'All government fees',
+    ],
     image: '/images/mt-iraya.jpg',
     imageAlt: 'Mt. Iraya rising over the Batanes landscape',
   },
   {
     slug: 'batanes-itbayat',
     name: 'Batanes + Itbayat',
-    price: '₱XX,XXX / pax',
-    duration: '4 Days / 3 Nights',
-    inclusions: ['Batan Tours', 'Itbayat Experience', 'Roundtrip Itbayat Flight', 'Transfers & Permits'],
+    price: '₱21,600 / pax',
+    duration: '5 Days / 4 Nights',
+    minimumPax: 'Minimum of 5 pax',
+    inclusions: [
+      'North Batan Tour',
+      'South Batan Tour',
+      'Sabtang Island Tour',
+      'Itbayat tours',
+      'Roundtrip airfare via AeroSpeed',
+      'Accommodation',
+      'Full set meals',
+    ],
     image: '/images/itbayat-cliffs.jpg',
     imageAlt: 'Raw coastal cliffs on Itbayat Island',
     recommended: true,
@@ -32,9 +50,16 @@ export const packages: readonly TravelPackage[] = [
   {
     slug: 'ultimate-north-escape',
     name: 'Ultimate North Escape',
-    price: '₱XX,XXX / pax',
-    duration: '5 Days / 4 Nights',
-    inclusions: ['Batan', 'Sabtang', 'Itbayat', 'Selected Meals', 'Full Ground Coordination'],
+    price: '₱7,100 / pax',
+    duration: '4 Days / 3 Nights',
+    minimumPax: 'Minimum of 5 pax',
+    inclusions: [
+      'North Batan Tour',
+      'South Batan Tour',
+      'Sabtang Island Tour',
+      'Lunch during tours',
+      'All government fees',
+    ],
     image: '/images/sabtang-lighthouse.jpg',
     imageAlt: 'Lighthouse overlooking the green hills and sea of Batanes',
   },
