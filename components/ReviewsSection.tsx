@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -20,7 +20,7 @@ export default function ReviewsSection() {
       <div className="reviews-heading">
         <p className="section-kicker">Guest stories</p>
         <h2 id="reviews-title">What Our <em>Guests Say</em></h2>
-        <p>Preview copy is shown below. Verified review quotes and source links can be added when approved.</p>
+        <p>Real stories from guests who explored Batanes and Itbayat with AeroSpeed.</p>
         <Link className="text-link" href="/reviews">Review details <ArrowRight aria-hidden="true" size={16} /></Link>
       </div>
 
@@ -35,14 +35,10 @@ export default function ReviewsSection() {
                 viewport={{ once: true, amount: 0.3 }}
                 whileInView={reduceMotion ? undefined : { opacity: [0, 1], y: [18, 0] }}
               >
-                <span className="demo-badge">Demo review</span>
-                <div className="stars" aria-label="5 out of 5 stars">
-                  {[0, 1, 2, 3, 4].map((star) => <Star aria-hidden="true" fill="currentColor" key={star} size={14} />)}
-                </div>
                 <blockquote>“{review.quote}”</blockquote>
                 <div className="reviewer">
                   <span className="review-avatar" aria-hidden="true">{review.initials}</span>
-                  <div><strong>{review.reviewer}</strong><small>{review.location}</small></div>
+                  <div><strong>{review.reviewer}</strong><small>{review.journey}</small></div>
                 </div>
               </motion.article>
             </CarouselItem>

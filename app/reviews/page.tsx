@@ -5,7 +5,7 @@ import GalleryStrip from '@/components/GalleryStrip';
 
 export const metadata: Metadata = {
   title: 'Guest Stories | AeroSpeed Travel & Tours',
-  description: 'Preview the guest review experience for AeroSpeed’s Batanes and Itbayat journeys.',
+  description: 'Read guest stories from AeroSpeed’s Batanes and Itbayat journeys.',
 };
 
 export default function ReviewsPage() {
@@ -15,7 +15,7 @@ export default function ReviewsPage() {
         eyebrow="Guest stories"
         title="Journeys remembered"
         italic="long after landing."
-        description="The review experience is ready for verified guest stories, with space for approved Google or Facebook source links."
+        description="Read the experiences of guests who explored Batanes and Itbayat with AeroSpeed Travel & Tours."
         image="/images/travelers-2pax.jpg"
         imageAlt="Travelers enjoying a Batanes journey"
       />

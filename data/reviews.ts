@@ -2,51 +2,30 @@ export type Review = {
   id: number;
   quote: string;
   reviewer: string;
-  location: string;
+  journey: string;
   initials: string;
-  isDemo: true;
 };
 
-// Demo-only content. Replace each entry with a verified review and source before launch.
 export const reviews: readonly Review[] = [
   {
     id: 1,
-    quote: 'Everything was smooth from booking to the actual trip. Batanes is already magical, but flying to Itbayat made the experience unforgettable.',
-    reviewer: 'Sample guest 01',
-    location: 'Location placeholder',
-    initials: '01',
-    isDemo: true,
+    quote: 'Thank you so much, AeroSpeed Travel & Tours, for the safe flight, smooth travel, and joy. Upon arrival in Itbayat, Batanes, we were warmly welcomed by our tour guide. Thank you so much, Kuya Bong and JP. The tour was extremely good and very flexible—a true example of an excellent tour guide. Kung gusto n’yo mag-travel in Itbayat, Batanes, I highly recommend AeroSpeed Travel & Tours!',
+    reviewer: 'Jayzene Santos',
+    journey: 'Itbayat, Batanes',
+    initials: 'JS',
   },
   {
     id: 2,
-    quote: 'The Itbayat trip was incredibly convenient. AeroSpeed took care of the details and made the entire journey feel effortless.',
-    reviewer: 'Sample guest 02',
-    location: 'Location placeholder',
-    initials: '02',
-    isDemo: true,
+    quote: 'Thank you so much, AeroSpeed Travel & Tours, for the great service during our Itbayat, Batanes escapade. Truly, we had a great time on a breathtaking island. We will never forget this wonderful journey of a lifetime.',
+    reviewer: 'Princes Joy Eseque',
+    journey: 'Itbayat, Batanes',
+    initials: 'PE',
   },
   {
     id: 3,
-    quote: 'Professional, organized, and easy to communicate with. We felt supported throughout our trip.',
-    reviewer: 'Sample guest 03',
-    location: 'Location placeholder',
-    initials: '03',
-    isDemo: true,
-  },
-  {
-    id: 4,
-    quote: 'The island planning felt personal from the start, and every transfer connected smoothly with the next part of our journey.',
-    reviewer: 'Sample guest 04',
-    location: 'Location placeholder',
-    initials: '04',
-    isDemo: true,
-  },
-  {
-    id: 5,
-    quote: 'Itbayat felt truly far beyond the usual—the landscapes, stories, and welcome made it the highlight of our Batanes escape.',
-    reviewer: 'Sample guest 05',
-    location: 'Location placeholder',
-    initials: '05',
-    isDemo: true,
+    quote: 'We are fortunate to have AeroSpeed Air as our tour guide during our family vacation in Batanes. Their three-day package covering North and South Batan Island, as well as Sabtang Island, was truly memorable even for us, who are already Ivatans. The untold stories shared throughout the tour and the sumptuous food made the experience even more special. Most commendable was the excellent service provided by the team, which made our trip comfortable, meaningful, and unforgettable. Dios Mamajes.',
+    reviewer: 'Jake Abela',
+    journey: 'Batanes family vacation',
+    initials: 'JA',
   },
 ] as const;
