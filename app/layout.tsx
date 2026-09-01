@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: 'AeroSpeed Travel & Tours | Explore Batanes & Itbayat',
   description:
     'Discover Batanes with AeroSpeed Travel & Tours. Explore Batan, Sabtang, and Itbayat with curated tours, local expertise, and AeroSpeed air access to Itbayat.',
+  icons: {
+    icon: '/logo.png',
+  },
   openGraph: {
     title: 'AeroSpeed Travel & Tours | Batanes, Beyond the Usual',
     description: 'Explore Batan, Sabtang, and Itbayat with local expertise and AeroSpeed air access to Itbayat.',
