@@ -3,11 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
 import InnerHero from '@/components/InnerHero';
+import { PageBreadcrumbs } from '@/components/PageBreadcrumbs';
 import { destinations } from '@/data/destinations';
 
 export const metadata: Metadata = {
   title: 'Batanes Destinations | AeroSpeed Travel & Tours',
   description: 'Discover Batan, Sabtang, and Itbayat with locally shaped AeroSpeed journeys across Batanes.',
+  alternates: { canonical: '/destinations' },
+  openGraph: { images: [{ url: '/images/batan.jpg', alt: 'Rolling green hills and coast of Batanes' }] },
+  twitter: { images: ['/images/batan.jpg'] },
 };
 
 export default function DestinationsPage() {
@@ -15,13 +19,14 @@ export default function DestinationsPage() {
     <>
       <InnerHero
         eyebrow="Batan · Sabtang · Itbayat"
-        title="Three islands."
+        title="Batanes Destinations."
         italic="One remarkable north."
         description="Each island carries a different rhythm—from Batan’s iconic roads to Sabtang’s living heritage and Itbayat’s raw northern edge."
         image="/images/batan.jpg"
         imageAlt="Rolling green hills and coast of Batanes"
         cta={{ label: 'Plan an island journey', href: '/contact' }}
       />
+      <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Destinations' }]} />
       <section className="destination-detail-list" aria-label="Batanes destinations">
         {destinations.map((destination, index) => (
           <article className={index % 2 ? 'destination-detail reverse' : 'destination-detail'} id={destination.slug} key={destination.slug}>

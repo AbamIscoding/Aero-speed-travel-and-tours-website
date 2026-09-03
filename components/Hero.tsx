@@ -25,7 +25,7 @@ export default function Hero() {
         </div>
 
         <h1 id="hero-title">
-          Batanes,
+          Batanes Tours,
           <em>Beyond the Usual.</em>
         </h1>
 

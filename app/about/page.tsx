@@ -3,10 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, HeartHandshake, MapPinned, Plane } from 'lucide-react';
 import InnerHero from '@/components/InnerHero';
+import { PageBreadcrumbs } from '@/components/PageBreadcrumbs';
 
 export const metadata: Metadata = {
   title: 'About AeroSpeed Travel & Tours | Batanes',
   description: 'Learn about AeroSpeed’s locally rooted approach to Batanes journeys by land, sea, and air.',
+  alternates: { canonical: '/about' },
+  openGraph: { images: [{ url: '/images/basco-church-travelers.jpg', alt: 'Travelers outside a church in Basco, Batanes' }] },
+  twitter: { images: ['/images/basco-church-travelers.jpg'] },
 };
 
 export default function AboutPage() {
@@ -14,13 +18,14 @@ export default function AboutPage() {
     <>
       <InnerHero
         eyebrow="Born in Batanes"
-        title="Local roots."
-        italic="A farther point of view."
+        title="Your Batanes Travel Agency."
+        italic="A local point of view."
         description="AeroSpeed brings island knowledge, personal coordination, and a distinctive Itbayat air connection into one deeply local way to see Batanes."
         image="/images/basco-church-travelers.jpg"
         imageAlt="Travelers outside a church in Basco, Batanes"
         cta={{ label: 'Plan with our team', href: '/contact' }}
       />
+      <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
       <section className="about-story" id="story">
         <div className="about-story-image"><Image alt="Guests with an AeroSpeed banner in the Batanes landscape" fill sizes="(max-width: 820px) 100vw, 48vw" src="/images/itbayat-travelers.jpg" /></div>
         <div className="about-story-copy">

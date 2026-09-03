@@ -3,11 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CalendarClock, Clock3, Compass, Plane } from 'lucide-react';
 import InnerHero from '@/components/InnerHero';
+import { PageBreadcrumbs } from '@/components/PageBreadcrumbs';
 import { AIRCRAFT_DETAILS, FLIGHT_DURATION, FLIGHT_SCHEDULE } from '@/data/site';
 
 export const metadata: Metadata = {
   title: 'Fly Beyond to Itbayat | AeroSpeed Travel & Tours',
   description: 'Discover AeroSpeed’s Itbayat experience—remote landscapes, local culture, and coordinated air access from Basco.',
+  alternates: { canonical: '/itbayat' },
   openGraph: { images: [{ url: '/images/itbayat-cliffs.jpg', alt: 'The dramatic coastal cliffs of Itbayat' }] },
   twitter: { images: ['/images/itbayat-cliffs.jpg'] },
 };
@@ -17,13 +19,14 @@ export default function ItbayatPage() {
     <>
       <InnerHero
         eyebrow="AeroSpeed signature"
-        title="Fly Beyond"
-        italic="to Itbayat."
+        title="Itbayat Flights"
+        italic="from Basco."
         description="A raw limestone island shaped by wind, sea, and Ivatan resilience—brought closer through AeroSpeed’s distinctive Basco–Itbayat connection."
         image="/images/itbayat-cliffs.jpg"
         imageAlt="Travelers overlooking Itbayat's dramatic Rapang cliffs"
         cta={{ label: 'Ask about Itbayat', href: '/contact' }}
       />
+      <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Itbayat' }]} />
       <section className="itbayat-route-page" aria-labelledby="route-title">
         <div className="route-page-copy">
           <p className="section-kicker">The air connection</p>

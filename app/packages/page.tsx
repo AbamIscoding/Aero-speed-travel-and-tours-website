@@ -3,11 +3,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
 import InnerHero from '@/components/InnerHero';
+import { PageBreadcrumbs } from '@/components/PageBreadcrumbs';
+import { JsonLd } from '@/components/JsonLd';
+import { buildPackagesItemListSchema } from '@/lib/structured-data';
 import { packages } from '@/data/packages';
 
 export const metadata: Metadata = {
   title: 'Curated Batanes Packages | AeroSpeed Travel & Tours',
   description: 'Compare three curated ways to experience Batan, Sabtang, and AeroSpeed’s signature Itbayat journey.',
+  alternates: { canonical: '/packages' },
+  openGraph: { images: [{ url: '/images/mt-iraya.jpg', alt: 'Mt. Iraya rising above the Batanes landscape' }] },
+  twitter: { images: ['/images/mt-iraya.jpg'] },
 };
 
 export default function PackagesPage() {
@@ -15,13 +21,15 @@ export default function PackagesPage() {
     <>
       <InnerHero
         eyebrow="Curated journeys"
-        title="Your pace."
+        title="Batanes Tour Packages."
         italic="Your far north."
         description="Start with a considered itinerary, then shape the details around your dates, interests, and preferred way of traveling."
         image="/images/mt-iraya.jpg"
         imageAlt="Mt. Iraya rising above the Batanes landscape"
         cta={{ label: 'Customize a journey', href: '/contact' }}
       />
+      <PageBreadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Packages' }]} />
+      <JsonLd data={buildPackagesItemListSchema(packages)} />
       <section className="package-detail-list" aria-label="Featured AeroSpeed packages">
         {packages.map((item) => (
           <article className={item.recommended ? 'package-detail recommended' : 'package-detail'} id={item.slug} key={item.slug}>

@@ -7,6 +7,7 @@ import {
   COMPANY_LOCATION,
   COMPANY_PHONE,
   COMPANY_PHONE_HREF,
+  COMPANY_POSTAL_CODE,
   companySocials,
   footerNavigation,
 } from '@/data/site';
@@ -32,7 +33,7 @@ export default function Footer() {
           <h2>Contact</h2>
           <a href={COMPANY_PHONE_HREF}><Phone aria-hidden="true" size={13} />{COMPANY_PHONE}</a>
           <a href={COMPANY_EMAIL_HREF}><Mail aria-hidden="true" size={13} />{COMPANY_EMAIL}</a>
-          <span><MapPin aria-hidden="true" size={13} />AeroSpeed, {COMPANY_LOCATION}</span>
+          <span><MapPin aria-hidden="true" size={13} />AeroSpeed, {COMPANY_LOCATION} {COMPANY_POSTAL_CODE}</span>
         </div>
         <div className="footer-column footer-socials">
           <h2>Socials</h2>

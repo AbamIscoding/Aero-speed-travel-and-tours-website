@@ -3,6 +3,7 @@ export const COMPANY_PHONE_HREF = 'tel:+639122425856';
 export const COMPANY_EMAIL = 'aerospeedtravelandtour2025@gmail.com';
 export const COMPANY_EMAIL_HREF = `mailto:${COMPANY_EMAIL}`;
 export const COMPANY_LOCATION = 'Basco, Batanes, Philippines';
+export const COMPANY_POSTAL_CODE = '3900';
 export const FLIGHT_DURATION = 'Confirm with AeroSpeed';
 export const FLIGHT_SCHEDULE = 'Confirm with AeroSpeed';
 export const AIRCRAFT_DETAILS = 'Confirm with AeroSpeed';
